@@ -1,0 +1,10 @@
+.main__checkbox {
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  border: 1px solid grey;
+}
+
+.main__checkbox:hover {
+  background-color: rgba(128, 128, 128, 0.1);
+}

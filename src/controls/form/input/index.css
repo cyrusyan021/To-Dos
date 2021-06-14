@@ -1,0 +1,10 @@
+.main__form__input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid grey;
+}
+
+.main__form__input:focus {
+  outline: none;
+  border-bottom: 1px solid rgb(10, 10, 100);
+}

@@ -1,0 +1,21 @@
+.main__pills {
+  min-width: 80px;
+  background-color: none;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.main__pills:hover {
+  cursor: pointer;
+  background-color: rgba(10, 10, 100, 0.3);
+  color: white;
+}
+
+.main__pills--active {
+  background-color: rgb(10, 10, 100);
+  color: white;
+  font-weight: 700;
+}

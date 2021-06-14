@@ -1,0 +1,9 @@
+.todo__container {
+  width: 60%;
+}
+
+@media (max-width: 767px) {
+  .todo__container {
+    width: 100%;
+  }
+}

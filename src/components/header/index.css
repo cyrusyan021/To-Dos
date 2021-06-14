@@ -1,0 +1,8 @@
+#app__header {
+  width: 100%;
+  background-color: rgb(10, 10, 100);
+  padding: 15px;
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+}

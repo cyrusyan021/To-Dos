@@ -1,0 +1,71 @@
+.main__button {
+  width: auto;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.5px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.main__button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.main__button--sm {
+  font-size: 0.8rem;
+}
+
+.main__button--md {
+  font-size: 1rem;
+}
+
+.main__button--lg {
+  font-size: 1.2rem;
+}
+
+.primary__button {
+  border: 1px solid rgb(49, 100, 211);
+  background-color: rgb(49, 100, 211);
+}
+
+.primary__button:not([disabled]):hover {
+  border: 1px solid rgb(39, 59, 167);
+  background-color: rgb(39, 59, 167);
+}
+
+.clear__button {
+  color: black;
+  border: none;
+  background-color: transparent;
+}
+
+.outlined__button {
+  color: black;
+  border: 1px solid black;
+  background-color: transparent;
+}
+
+.outlined__button:not([disabled]):hover {
+  background-color: rgb(52, 54, 59);
+}
+
+.warning__button {
+  border: 1px solid rgb(195, 46, 66);
+  background-color: rgb(195, 46, 66);
+}
+
+.warning__button:not([disabled]):hover {
+  border: 1px solid rgb(156, 40, 55);
+  background-color: rgb(156, 40, 55);
+}
+
+.icon__button {
+  background-color: transparent !important;
+}
