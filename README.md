@@ -1,7 +1,12 @@
 # To-Dos (for demo purpose)
 
+<p align="center">
+  <img width="auto" height="auto" src="./todos__demo.gif">
+</p>
+
+
 ## Project
-For development, you will need Node.js (12.13.0+) and a node global package, NPM/Yarn, installed in your environment.
+For development, you will need Node.js (12.13.0+) and a node global package, NPM, installed in your environment.
 
 
 ## Key Libraries and Frameworks
@@ -18,9 +23,9 @@ For development, you will need Node.js (12.13.0+) and a node global package, NPM
 
 
 ## Quick Start
-1. yarn install
-2. yarn start
+1. npm install
+2. npm start
 
 
 ### Test
-yarn run test
+npm run test
