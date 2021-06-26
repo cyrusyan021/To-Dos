@@ -1,4 +1,4 @@
-import todoApiInstance from 'api/configuration/todo';
+import todoApiInstance from 'api/configurations/todo';
 
 const getAllTodosApi = () => {
   return new Promise((resolve, reject) => {

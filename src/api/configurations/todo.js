@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const todoApiInstance = axios.create({
-  baseURL: 'https://jsonplaceholder.typicode.com/todos',
+  baseURL: process.env.REACT_APP_TODO_ENDPOINT,
   headers: { 'Content-Type': 'application/json' },
   timeout: 3000,
 });

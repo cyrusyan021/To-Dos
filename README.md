@@ -24,7 +24,11 @@ For development, you will need Node.js (12.13.0+) and a node global package, NPM
 
 ## Quick Start
 1. npm install
-2. npm start
+2. create `.env` file at root and add the following variable
+    ```
+      REACT_APP_TODO_ENDPOINT=https://jsonplaceholder.typicode.com/todos
+    ```
+3. npm start
 
 
 ## Test

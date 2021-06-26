@@ -19,7 +19,7 @@ export const useGetTodoItemRequestAction = () => {
     dispatch({ type: GET_ITEM_REQUEST });
     getAllTodosApi()
       .then(res => {
-        return dispatch({
+        dispatch({
           type: GET_ITEM_SUCCESS,
           payload: (res || [])
             .slice(0, 10)
@@ -27,7 +27,7 @@ export const useGetTodoItemRequestAction = () => {
         });
       })
       .catch(__ => {
-        return dispatch({ type: GET_ITEM_ERROR });
+        dispatch({ type: GET_ITEM_ERROR });
       });
   }, [dispatch]);
 };
