@@ -1,8 +1,11 @@
 import React, { useMemo } from 'react';
+import PropTypes from 'prop-types';
+
+import { BUTTON_TYPE, BUTTON_TYPE_PROPS, SIZE_PROPS, SIZE } from 'constants/types';
 
 import './index.css';
 
-const Button = ({ className="", children, buttonType='primary', buttonSize='md', ...otherProps }) => {
+const Button = ({ className, children, buttonType, buttonSize, ...otherProps }) => {
   const buttonClassName = useMemo(() => {
     switch (buttonType) {
       case 'clear':
@@ -31,6 +34,24 @@ const Button = ({ className="", children, buttonType='primary', buttonSize='md',
       { children }
     </button>
   );
+}
+
+Button.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node,
+  buttonType: PropTypes.oneOf(BUTTON_TYPE_PROPS),
+  buttonSize: PropTypes.oneOf(SIZE_PROPS),
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func,
+}
+
+Button.defaultProps = {
+  className: '',
+  children: <></>,
+  buttonType: BUTTON_TYPE.primary,
+  buttonSize: SIZE.md,
+  disabled: false,
+  onClick: ()=>{},
 }
 
 export default Button;

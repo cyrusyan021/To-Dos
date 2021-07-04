@@ -5,7 +5,7 @@ import Pill from 'controls/pill';
 
 describe("Pill", () => {
   const props = {
-    option:{ id: 'testing-id' },
+    option: { id: 'testing-id' },
     pillsOnClick: jest.fn(),
   };
 
