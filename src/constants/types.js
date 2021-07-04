@@ -13,13 +13,13 @@ const SIZE = {
 }
 
 /* --- props --- */
-const BUTTON_TYPE_PROPS = Object.values(BUTTON_TYPE);
+const BUTTON_TYPE_VALID_PROPS = Object.values(BUTTON_TYPE);
 
-const SIZE_PROPS = Object.values(SIZE);
+const SIZE_VALID_PROPS = Object.values(SIZE);
 
 export {
   BUTTON_TYPE,
-  BUTTON_TYPE_PROPS,
+  BUTTON_TYPE_VALID_PROPS,
   SIZE,
-  SIZE_PROPS,
+  SIZE_VALID_PROPS,
 }

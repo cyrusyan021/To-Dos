@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 
 import './index.css';
 
+export const PILL_PROP_TYPES = PropTypes.exact({
+  id: PropTypes.string,
+  name: PropTypes.string,
+});
+
 const Pill = ({ option, activeId, pillsOnClick }) => {
   return (
     <div
@@ -15,10 +20,7 @@ const Pill = ({ option, activeId, pillsOnClick }) => {
 }
 
 Pill.propTypes = {
-  option: PropTypes.shape({
-    id: PropTypes.string,
-    name: PropTypes.string,
-  }),
+  option: PILL_PROP_TYPES,
   activeId: PropTypes.string,
   pillsOnClick: PropTypes.func,
 }

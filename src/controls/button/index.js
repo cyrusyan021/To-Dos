@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 
-import { BUTTON_TYPE, BUTTON_TYPE_PROPS, SIZE_PROPS, SIZE } from 'constants/types';
+import { BUTTON_TYPE, BUTTON_TYPE_VALID_PROPS, SIZE_VALID_PROPS, SIZE } from 'constants/types';
 
 import './index.css';
 
@@ -39,8 +39,8 @@ const Button = ({ className, children, buttonType, buttonSize, ...otherProps }) 
 Button.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
-  buttonType: PropTypes.oneOf(BUTTON_TYPE_PROPS),
-  buttonSize: PropTypes.oneOf(SIZE_PROPS),
+  buttonType: PropTypes.oneOf(BUTTON_TYPE_VALID_PROPS),
+  buttonSize: PropTypes.oneOf(SIZE_VALID_PROPS),
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
 }

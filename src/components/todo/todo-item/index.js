@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 
 import TodoItemContainer from 'components/todo/todo-item-container';
 import Button from 'controls/button';
@@ -8,6 +9,12 @@ import Input from 'controls/input';
 import { TrashIcon } from 'assets/icons';
 
 import { useUpdateTodoItemAction, useRemoveTodoItemAction } from 'redux/todo/actions';
+
+export const TODO_ITEM_PROP_TYPES = PropTypes.exact({
+  id: PropTypes.string,
+  name: PropTypes.string,
+  isCompleted: PropTypes.bool,
+});
 
 const TodoItem = ({ item }) => {
   const updateTodoItem = useUpdateTodoItemAction();
@@ -26,7 +33,7 @@ const TodoItem = ({ item }) => {
   }
 
   return (
-    <TodoItemContainer item={ item }>
+    <TodoItemContainer isCompleted={ item.isCompleted }>
       <Checkbox
         className="todo-item__checkbox"
         isChecked={ item.isCompleted }
@@ -51,6 +58,14 @@ const TodoItem = ({ item }) => {
       ) }
     </TodoItemContainer>
   );
+}
+
+TodoItem.propTypes = {
+  item: TODO_ITEM_PROP_TYPES,
+}
+
+TodoItem.defaultProps = {
+  item: {},
 }
 
 export default memo(TodoItem);

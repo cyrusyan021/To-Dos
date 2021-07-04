@@ -2,7 +2,7 @@ import React from 'react';
 import { Spinner as BootstrapSpinner } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
-import { SIZE, SIZE_PROPS } from 'constants/types';
+import { SIZE, SIZE_VALID_PROPS } from 'constants/types';
 
 const Spinner = ({ size }) => {
   return (
@@ -13,7 +13,7 @@ const Spinner = ({ size }) => {
 }
 
 Spinner.propTypes = {
-  size: PropTypes.oneOf(SIZE_PROPS),
+  size: PropTypes.oneOf(SIZE_VALID_PROPS),
 }
 
 Spinner.defaultProps = {

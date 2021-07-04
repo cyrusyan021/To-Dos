@@ -1,13 +1,24 @@
 import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 
 import './index.css';
 
-const TodoItem = ({ item={}, children }) => {
+const TodoItemContainer = ({ isCompleted, children }) => {
   return (
-    <div className={ `todo-item ${ item.isCompleted ? "todo-item--completed" : "" }` }>
+    <div className={ `todo-item ${ isCompleted ? "todo-item--completed" : "" }` }>
       { children }
     </div>
   );
 }
 
-export default memo(TodoItem);
+TodoItemContainer.propTypes = {
+  isCompleted: PropTypes.bool,
+  children: PropTypes.node,
+}
+
+TodoItemContainer.defaultProps = {
+  isCompleted: false,
+  children: <></>,
+}
+
+export default memo(TodoItemContainer);
