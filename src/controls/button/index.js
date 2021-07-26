@@ -8,19 +8,11 @@ import './index.css';
 const Button = ({ className, children, buttonType, buttonSize, ...otherProps }) => {
   const buttonClassName = useMemo(() => {
     switch (buttonType) {
-      case 'clear':
-        return 'clear__button';
-
-      case 'outlined':
-        return 'outlined__button';
-
-      case 'warning':
-        return 'warning__button';
-
-      case 'icon':
-        return 'icon__button';
-
-      case 'primary':
+      case BUTTON_TYPE.clear: { return 'clear__button'; }
+      case BUTTON_TYPE.outlined: { return 'outlined__button'; }
+      case BUTTON_TYPE.warning: { return 'warning__button'; }
+      case BUTTON_TYPE.icon: { return 'icon__button'; }
+      case BUTTON_TYPE.primary:
       default:
         return 'primary__button';
     }
